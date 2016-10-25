@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Quote Machine</title>
+        <link rel=stylesheet type="text/css" href="quotemachine.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+          crossorigin="anonymous"> 
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+          crossorigin="anonymous">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    </head>
+    <style type="text/css">
+    	html {
+    border: dashed 0px red;
+}
+head {
+    border: dotted 0px green;
+    height: 100%;
+}
+body {
+    border: double 0px blue;
+    height: 100%;
+}
+#header1 {
+    border: groove 0px green;
+    background-image: url("http://brandthunder.com/wp/wp-content/uploads/2014/09/Black-Cat-Wallpaper-1024x576.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+#container-fluid1 {
+    border: dashed orange 0px;
+    height: 100%;
+}
+#container1 {
+    border: solid yellow 0px;
+    height: 100%;
+    position: relative;
+}
+#container1 .sayings {
+    position: relative;
+    border: dashed 0px red;
+    height: 60%;
+    margin-top: -35px;
+}
+body #container1 h1 {
+    color: green;
+    font-size: 45px;
+    border: groove 0px black;
+    font-family: serif;
+    text-align: center;
+    margin-top: 60px;
+}
+body #container1 #quote {
+    color: white;
+    font-size: 25px;
+    border: dotted 0px black;
+    font-family: serif;
+    text-align: center;
+    width: 800px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    -webkit-transform: translate(-50%,0%);
+}
+body #container1 #author {
+    color: white;
+    font-size: 25px;
+    border: dotted 0px black;
+    font-family: serif;
+    text-align: center;
+    width: 800px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -webkit-transform: translate(-50%,0%);
+}
+body #container1 #changebutton {
+    position: absolute;
+    left: 38%;
+    top: 70%;
+    
+}
+body #container1 #tweetbutton {
+    position: absolute;
+    left: 52%;
+    top: 70%;
+    
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: right;
+}
+.easter {
+	margin-left: 65%;
+}
+    </style>
+
+    <script type="text/javascript">
+    	var quote = ["Scottish lore maintains that a black cat’s appearance at your home leads to great wealth",
+             "\"In\" ancient Egypt, black cats were so revered that killing one was deemed a capital offense",
+             "The Bombay cat — the blackest of the black cats — was developed in Louisville, Kentucky in the late 50s.",
+             "In England, giving a black cat to a bride is thought to bring her good luck.",
+             "To fishermen, black cats ensure a safe journey home.",
+             "Back to the Dark Ages, when witch hunts were commonplace. Elderly, solitary women were often accused of witchcraft, and their pet cats were said to be their 'familiars.'",
+             "In the Middle Ages in England, all cats – but black colored ones in particular – were often associated with evil and witchcraft. Some people believed black cats were demons who helped witches to perform black magic. Others thought the cats were witches themselves, and even believed they could fly on a broomstick!",
+             "8. In the Middle Ages in Germany, it was believed that a black cat jumping on the bed of a sick person meant that person would die.",
+             "In Finland, around the same time, black cats were thought to carry the souls of the dead into the afterlife.",
+             "In the 18th and 19th centuries, black cats were kept by fishermen’s wives, as it was believed they would keep their husbands safe at sea.",
+             "Today, if you live in England, Scotland or Australia, a black cat that crosses your path is meant to bring good luck. But if you live in Ireland, America or India, it’s said to bring bad luck.",
+             "Black cats typically have yellow eyes due to Melanism, Melanism is basically the opposite of Albinism. An excessive amount of melanin in these cats is what causes their fur to be so black. Essentially, these cats have so much melanin that it causes their irises to be golden/yellow!",
+             "Many early Pagans, especially elderly female Pagans, were known for having a cat, especially a black cat. Due to the Pagan belief in the earth and magic, as well as their refusal to convert to Christianity, many of the early Christians perceived them as being devil-worshipers and their pet cats were included in this mix.",
+             "Due to the myths spread about black cats, anyone during this time caught with a black cat would often be killed. Many black cats during the Middle Ages were themselves killed as a way to 'rid the world' of demons and evil.",
+             "Professional gamblers are afraid (or try to avoid) black cats because it is said that if a black cat crosses the path of a gambler, he is doomed to fail.",
+             "It is considered very good luck if someone gives you a black cat.",
+             "Making a black cat mad, by intentionally hurting it or causing it harm, is considered very bad luck.",
+             "In Scotland, if a black cat sits on someone's porch, it is said to bring them great monetary fortune.",
+             "It was once believed that witches could transform into a black cat a total of 9 times. This is likely where the legend of black cats having 9 lives originated from.",
+             "August 17th is 'National Black Cat Awareness Day'.",
+             "**Exclusive**\n Above Jack's head lies \n The true treasure \n **Exclusive**"]
+
+var author = ["Fact 1",
+             "Fact 2",
+             "Fact 3",
+             "Fact 4",
+             "Fact 5",
+             "Fact 6",
+             "Fact 7",
+             "Fact 8",
+             "Fact 9",
+             "Fact 10",
+             "Fact 11",
+             "Fact 12",
+             "Fact 13",
+             "Fact 14",
+             "Fact 15",
+             "Fact 16",
+             "Fact 17",
+             "Fact 18",
+             "Fact 19",
+             "Fact 20",
+             "Hint"]
+
+var ran = 0;
+
+function random() {
+    ran = Math.floor(Math.random() * quote.length);
+    return ran;
+};
+    random();
+    document.getElementById("quote").innerHTML = "\"" + quote[0] + "\"";
+    document.getElementById("author").innerHTML = "~ " + author[0];
+  
+    var newquote = quote[0];
+    var newauthor = author[0];
+function quotegenerate(){
+    random();
+    newquote = quote[ran];
+    newauthor = author[ran]
+}
+function nextquote() {
+    //code
+    
+    quotegenerate();
+    document.getElementById("quote").innerHTML = "\"" + newquote+ "\"";
+    document.getElementById("author").innerHTML = "~ " + newauthor;
+}
+document.getElementById("tweetbutton").onclick = function() {
+    window.open("https://twitter.com/intent/tweet?text=" + newquote);   
+}
+    </script>
+    <body>
+   <div>
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="HalloweenCat.html">Catoween</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="HalloweenCat.html">Home</a></li>
+            <li><a href="catfacts.html">Freaky Facts</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    </div>
+    <img style="z-index: -1; margin-top: -20px; border-radius: 25%" src="http://www.winterbluemusic.com/wp-content/uploads/2016/09/Halloween-Cobwebs-16680969-Halloween-Spiders-web-Stock-Vector-spider-225x180.jpg">
+    <div style="margin-top: -200px">
+        <header class=header id=header1>
+            <div class=container-fluid id=container-fluid1>
+                <div id=container1>
+                    <h1>Freaky Feline Facts<hr width="40%"></h1>
+                    <div class=sayings>
+                        <p id=quote></p>
+                        <p id=author></p>
+                    </div>
+                    <img class="easter" src="https://codebits.eu/builder/avatar_images/bgcolor/picker/t-bgcolor-15.png" onClick='alert("Congrats, you have found the Easter Egg. To recieve your reward text -bgcode12- to (404)-820-4577. This code can only be used once. :)")'/>
+                    <button class="btn btn-primary" id=changebutton onclick=nextquote()>New Fact</button>
+                    <a href="https://twitter.com/intent/tweet?text=" target="_blank"><button class="btn btn-primary" id=tweetbutton> Tweet </button></a>
+                </div>
+            </div>
+        </header>
+    </div>  
+<div class="container-fluid">
+  <div class="row">
+    <div style="background-color: black; margin-top: -30px;" class="col-lg-12">
+    	<h3 style="color: #db5213;">Bibliography</h3>
+    	<p style="color: #db5213;">Assassins, By The Original. "10 Weird Facts About Cats - Listverse." Listverse. N.p., 20 June 2014. Web. 22 Oct. 2016. <http://listverse.com/2013/08/02/ten-weird-facts-about-cats/>.</p>
+<p style="color: #db5213;">
+"15 Fun Black Cat Facts | Pet Care Article | Petco.com." 15 Fun Black Cat Facts | Pet Care Article | Petco.com. N.p., n.d. Web. 22 Oct. 2016. <http://www.petco.com/content/petco/PetcoStore/en_US/pet-services/resource-center/seasonal-topics/15-Black-Cat-Fun-Facts.html>.</p>
+<img style="margin-left: 1000px; margin-top: -100px" src="http://img5.cliparto.com/pic/s/254730/5435175-halloween-old-jack-o-lantern-on-black.jpg">
+    </div> 
+  </div>
+</div>
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+        <script src="quotemachine.js"></script>
+    </body>
+<script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+</html>
